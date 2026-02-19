@@ -1,24 +1,32 @@
-
 :root {
-
+  --primary-blue: #050a50;
+  --accent-cyan: #00ccff;
+  --light-cyan: #94CFFF;
+  --text-white: #ffffff;
+  --text-dark: #002d5a;
+  --text-black: #141414;
+  --bg-overlay: rgba(37, 62, 89, 0.75);
+  --max-width: 1062px;
+  --padding-horizontal: 20px;
+  --font-family: 'Inter', sans-serif;
+  --font-heading: "Headland One", sans-serif;
 }
-
 
 .container {
   display: flex;
-  align-items: center;     
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-content: center;
-  max-width: 1062px;
+  max-width: var(--max-width);
   width: 100%;
-   margin: 0 auto;
-    padding: 0 20px;
+  margin: 0 auto;
+  padding: 0 var(--padding-horizontal);
 } 
 
 
 body {
-    font-family: "Inter", sans-serif; 
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
 }
@@ -34,20 +42,19 @@ body {
 
 .nav-list a {
   text-decoration: none;
-  color: #ffffff;
-  font-family: sans-serif;
+  color: var(--text-white);
   font-size: 18px;
   transition: color 0.3s;
 }
 
 
 .nav-list a.active {
-  color: #94CFFF 
+  color: var(--light-cyan);
 }
 
 
 header {
-    height: 100px; 
+   height: 100px; 
     width: 100%;
     background: url(../img/team-group.jpg);
    background-size: 100% auto; 
@@ -61,91 +68,83 @@ header {
 
 
 .btn-login {
-   background-color: #050a50;   
-  color: #00ccff;              
+  background-color: var(--primary-blue);
+  color: var(--accent-cyan);
   padding: 10px 35px;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-heading);
   font-size: 20px;
-  font-weight: 500px; 
-  border: 3px solid #00ccff;  
+  font-weight: 500;
+  border: 3px solid var(--accent-cyan);
   border-radius: 45px 5px 45px 5px;
   cursor: pointer;
   outline: none;
-  font-family: "Headland One" sans-serif; 
   width: 158px;
   height: 46px;
 }
 
 
 .btn-login:hover {
-  background-color: #00ccff;
-  color: #050a50;
-  box-shadow: 0 0 20px rgba(0, 204, 255, 0.6); 
+  background-color: var(--accent-cyan);
+  color: var(--primary-blue);
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.6);
 }
 
 
 .hero {
-    background: url(../img/team-group.jpg);  
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: url(../img/team-group.jpg) no-repeat center / cover;
     height: 740px;
     width: 100%;
     margin-top: 5px;
     display: flex;
     align-items: center;
-   }
-
+    position: relative;
+}
 
 .switch-btn {
     width: 36px;
     height: 20px;
-    border-radius: 5px;
-    border: 1px solid white;
+    border-radius: 50px;
+    border: 1px solid var(--text-white);
     display: inline-flex;
     justify-content: flex-end;
-    padding: 4px;
     align-items: center;
-    border-radius: 50px;
+    padding: 4px;
 }
 
 
 .switch-dot {
     width: 12px;
     height: 12px;
-    background-color: white;
-    border-radius: 50px;
-    text-decoration: none; 
-    color: white;
+    background-color: var(--text-white);
+    border-radius: 50%;
 }
 
 
 .switch {
-    display: inline-flex; 
+    display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     font-size: 16px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); 
-
-    right: 100px; 
+    right: 100px;
+    transform: translateY(-50%);
 }
 .hero .container {
-   margin-left: 100px; 
+    margin-left: 100px;
     margin-right: auto;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
     width: auto;
 }
 
 
 .navi-text, .hero-description {
-  color: #ffffff;
-    font-size: 18px;      
+  color: var(--text-white);
+    font-size: 18px;
     line-height: 1.4;
     margin: 0;
     text-align: left;
@@ -161,26 +160,25 @@ header {
 
 
 .btn {
-    background-color: #050a50;   
-  color: #00ccff;              
-  padding: 17px 35px;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  font-weight: 500; 
-  border: 2px solid #00ccff;  
-  border-radius: 32px 5px 32px 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-  font-family: "Headland One" sans-serif; 
-  margin-top: 40px
+    background-color: var(--primary-blue);
+    color: var(--accent-cyan);
+    padding: 17px 35px;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid var(--accent-cyan);
+    border-radius: 32px 5px 32px 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    margin-top: 40px;
 }
 
 
 .btn:hover {
-  background-color: #00ccff;
-  color: #050a50;
-  box-shadow: 0 0 20px rgba(0, 204, 255, 0.6); 
+  background-color: var(--accent-cyan);
+  color: var(--primary-blue);
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.6);
 }
 
 
@@ -196,7 +194,7 @@ header {
 
 
 .social-icons img {
-    height: 30px;         
+    height: 30px;
     display: block;
     transition: transform 0.3s ease;
 }
@@ -222,29 +220,22 @@ header {
     transform: scale(1.1);
 }
 
-
-.hero {
-    position: relative;
-}
-
 .info-section {
-    background-color: #ffffff;
-    padding: 40px 0; 
+    background-color: var(--text-white);
+    padding: 40px 0;
     width: 100%;
 }
 
-
 .info-section .container {
     display: flex;
-    flex-direction: column; 
-    align-items: center;   
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .info-section .info-title {
-    font-family: 'Arial', sans-serif; 
     font-size: 32px;
-    color: #002d5a;
+    color: var(--text-dark);
     line-height: 1.2;
     text-transform: uppercase;
 
@@ -254,8 +245,8 @@ header {
 
 .info-section .info-author {
     font-size: 18px;
-    color: #000000;
-    margin: 0 0 30px 0; 
+    color: var(--text-black);
+    margin: 0 0 30px 0;
 }
 
 .info-section .info-divider img {
@@ -265,24 +256,17 @@ header {
 }
 
 main .trailer-section {
-    background-image: url(../img/card-featured.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 741px; 
+    background: url(../img/card-featured.png) no-repeat center / cover;
+    height: 741px;
     display: flex;
     align-items: center;
-    max-width: 100%;
     width: 100%;
-    padding-left: 500px; 
+    padding-left: 500px;
     margin: 0;
 }
 
-
 .trailer-section .container {
-    max-width: 100%;
-    width: 100%;
-    padding-left: 100px; 
+    padding-left: 100px;
     margin: 0;
 }
 
@@ -293,22 +277,21 @@ main .trailer-section {
 }
 
 .quote-block {
-  background-color: #ffffff;
-    padding: 40px 0; 
+  background-color: var(--text-white);
+    padding: 40px 0;
     width: 100%;
 }
 
 .quote-container {
   display: flex;
-    flex-direction: column; 
-    align-items: center;   
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .quote-title {
-  font-family: 'Arial', sans-serif; 
     font-size: 32px;
-    color: #141414;
+    color: var(--text-black);
     line-height: 1.2;
     text-transform: uppercase;
 
@@ -318,37 +301,30 @@ main .trailer-section {
 
 .quote-author {
     font-size: 18px;
-    color: #000000;
-    margin: 0 0 30px 0; 
+    color: var(--text-black);
+    margin: 0 0 30px 0;
 }
 
 .quote-symbol img {
     width: 220px;
     height: auto;
-    display: block;;
+    display: block;
 }
 
 .language-section {
-  background: url(../img/card-primary.png) no-repeat center center / cover;
+  background: url(../img/card-primary.png) no-repeat center / cover;
   padding: 100px 0;
   width: 100%;
   min-height: 100vh;
   text-align: center;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 .main-heading {
-  font-family: "Headland One" sans-serif;
+  font-family: var(--font-heading);
   font-size: 32px;
   margin-bottom: 50px;
-  font-weight: 320;
-  /* Цей рядок ставить текст по центру */
-  text-align: center; 
-  /* Якщо заголовок все одно збоку, додай ці два рядки: */
+  font-weight: normal;
+  text-align: center;
   width: 100%;
   display: block;
 }
@@ -372,8 +348,8 @@ main .trailer-section {
 }
 
 .lang-ukr {
-  font-size: 18x;
-  margin-bottom: 60px; 
+  font-size: 18px;
+  margin-bottom: 60px;
 }
 
 .lang-navi {
@@ -410,13 +386,10 @@ main .trailer-section {
 .main-footer {
     position: relative;
     width: 100%;
-   
-    min-height: 223px; 
-    
+    min-height: 223px;
     background: url(../img/banner-section.png) no-repeat center / cover;
-    
     padding: 60px 0 20px;
-    color: white;
+    color: var(--text-white);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -430,11 +403,8 @@ main .trailer-section {
     left: 0;
     width: 100%;
     height: 100%;
-    
-   background-color: rgba(37, 62, 89, 0.75);
-    
-    backdrop-filter: blur(2px); 
-    
+    background-color: var(--bg-overlay);
+    backdrop-filter: blur(2px);
     z-index: 1;
 }
 
@@ -476,14 +446,14 @@ main .trailer-section {
 }
 
 .footer-right a {
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
 }
 
 .footer-right a:hover {
-    color: #00fbff; 
+    color: var(--accent-cyan);
 }
 
 .copyright {
